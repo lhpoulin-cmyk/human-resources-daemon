@@ -24,7 +24,7 @@ It is **not** intended to autonomously make adverse employment decisions, determ
 
 Development begins with synthetic data only. Prefer deterministic state, explicit schemas, provenance, reversible operations, and human review at consequential boundaries. AI models are bounded inference providers, not authorities.
 
-See [CLAUDE.md](CLAUDE.md) for the current implementation handoff.
+See [INITIAL-ENGINEERING-ASSIGNMENT.md](INITIAL-ENGINEERING-ASSIGNMENT.md) for the active first-pass assignment and [CLAUDE.md](CLAUDE.md) for governing implementation instructions.
 
 ## License
 
