@@ -2,6 +2,8 @@
 
 You are taking over the initial engineering pass for **human-resources-daemon**.
 
+**Active assignment:** [`INITIAL-ENGINEERING-ASSIGNMENT.md`](INITIAL-ENGINEERING-ASSIGNMENT.md). This is the authoritative task for the first pass. Ignore unrelated repositories, Helix remediation trackers, and workstation checkpoints unless this repository explicitly declares a dependency on them.
+
 ## Mission
 
 Turn the project brief and architecture direction into a small, rigorous, testable foundation for a human-authority-first HR process system.
