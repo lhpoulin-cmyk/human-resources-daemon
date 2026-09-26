@@ -1,0 +1,22 @@
+{
+  "case_id": "case-002",
+  "title": "Synthetic: single message conflating three topics",
+  "status": "open",
+  "topics": ["travel_reimbursement", "shift_schedule_change", "parking_permit"],
+  "events": [
+    {
+      "event_id": "evt-010",
+      "kind": "communication_received",
+      "occurred_at": "2026-02-10T09:15:00Z",
+      "actor": "employee_role",
+      "summary": "Single email raising travel reimbursement, a shift-schedule concern, and a parking permit question together.",
+      "evidence_refs": ["ev-010"]
+    }
+  ],
+  "evidence_refs": ["ev-010"],
+  "unresolved_questions": [
+    "Should this case be split into three separate single-topic cases before further processing?",
+    "Is the parking permit question actually dependent on the shift schedule change, or was it only mentioned in the same message?"
+  ],
+  "human_decisions": []
+}

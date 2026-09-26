@@ -1,0 +1,29 @@
+{
+  "case_id": "case-001",
+  "title": "Synthetic: single-topic PTO request",
+  "status": "waiting",
+  "topics": ["paid_time_off"],
+  "events": [
+    {
+      "event_id": "evt-001",
+      "kind": "communication_received",
+      "occurred_at": "2026-01-05T14:00:00Z",
+      "actor": "employee_role",
+      "summary": "Employee requested 3 days PTO for 2026-02-02 through 2026-02-04.",
+      "evidence_refs": ["ev-001"]
+    },
+    {
+      "event_id": "evt-002",
+      "kind": "communication_sent",
+      "occurred_at": "2026-01-05T16:30:00Z",
+      "actor": "manager_role",
+      "summary": "Manager acknowledged receipt, said approval pending coverage check.",
+      "evidence_refs": ["ev-002"]
+    }
+  ],
+  "evidence_refs": ["ev-001", "ev-002"],
+  "unresolved_questions": [
+    "Has coverage for 2026-02-02 through 2026-02-04 been confirmed?"
+  ],
+  "human_decisions": []
+}

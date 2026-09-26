@@ -1,0 +1,12 @@
+[
+  {
+    "evidence_id": "ev-030",
+    "source_type": "document",
+    "captured_at": "2026-03-15T09:00:00Z",
+    "document_date": null,
+    "content_ref": "fixtures/missing_revision_date/raw/ev-030-undated-policy.txt",
+    "content_hash": null,
+    "supersedes": null,
+    "is_synthetic": true
+  }
+]

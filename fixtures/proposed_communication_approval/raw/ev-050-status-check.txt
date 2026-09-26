@@ -1,0 +1,7 @@
+[SYNTHETIC TEST FIXTURE — no real person or event]
+
+From: employee_role
+To: hr_role
+Date: 2026-04-01
+
+Any update on whether my PTO for Feb 2-4 was approved?

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/human-resources-daemon/schemas/request.schema.json",
+  "title": "Request",
+  "description": "A request made by one party of another within a case, tracked to closure.",
+  "type": "object",
+  "required": ["request_id", "case_id", "requested_by_role", "requested_of_role", "summary", "requested_at", "status"],
+  "properties": {
+    "request_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "requested_by_role": {"type": "string", "minLength": 1},
+    "requested_of_role": {"type": "string", "minLength": 1},
+    "summary": {"type": "string", "minLength": 1},
+    "requested_at": {"type": "string", "format": "date-time"},
+    "status": {
+      "type": "string",
+      "enum": ["open", "fulfilled", "declined", "withdrawn"]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

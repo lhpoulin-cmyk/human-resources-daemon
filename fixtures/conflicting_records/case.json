@@ -1,0 +1,29 @@
+{
+  "case_id": "case-003",
+  "title": "Synthetic: conflicting records of a schedule agreement",
+  "status": "review",
+  "topics": ["shift_schedule_change"],
+  "events": [
+    {
+      "event_id": "evt-020",
+      "kind": "communication_received",
+      "occurred_at": "2026-03-01T10:00:00Z",
+      "actor": "employee_role",
+      "summary": "Employee states manager verbally agreed to Tuesday/Thursday remote days.",
+      "evidence_refs": ["ev-020"]
+    },
+    {
+      "event_id": "evt-021",
+      "kind": "communication_received",
+      "occurred_at": "2026-03-02T11:00:00Z",
+      "actor": "manager_role",
+      "summary": "Manager's written record states remote days were discussed but not finalized.",
+      "evidence_refs": ["ev-021"]
+    }
+  ],
+  "evidence_refs": ["ev-020", "ev-021"],
+  "unresolved_questions": [
+    "Was a remote-day schedule actually agreed, or only discussed?"
+  ],
+  "human_decisions": []
+}

@@ -1,0 +1,9 @@
+{
+  "decision_id": "dec-050",
+  "case_id": "case-006",
+  "decided_at": "2026-04-01T10:00:00Z",
+  "decided_by_role": "hr_role",
+  "decision": "Approved the draft reply for sending as-is.",
+  "basis_refs": ["ev-050", "prop-050"],
+  "proposed_action_id": "prop-050"
+}

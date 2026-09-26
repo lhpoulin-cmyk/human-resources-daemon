@@ -1,0 +1,8 @@
+[SYNTHETIC TEST FIXTURE — no real person or event]
+
+From: hr_role
+To: employee_role
+Date: 2026-01-22
+
+Approved — forwarded to payroll for payment. You should see it in
+your next cycle.

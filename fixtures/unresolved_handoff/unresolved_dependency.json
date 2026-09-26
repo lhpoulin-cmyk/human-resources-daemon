@@ -1,0 +1,11 @@
+{
+  "dependency_id": "dep-040",
+  "case_id": "case-005",
+  "description": "Reimbursement was approved and handed off to payroll for payment, but no evidence confirms payroll issued it.",
+  "blocking": ["case_resolution", "payment_issuance"],
+  "owner_role": "payroll_role",
+  "opened_at": "2026-01-22T10:05:00Z",
+  "resolved_at": null,
+  "status": "open",
+  "evidence_refs": ["ev-041"]
+}

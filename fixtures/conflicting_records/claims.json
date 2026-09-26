@@ -1,0 +1,22 @@
+[
+  {
+    "claim_id": "claim-020",
+    "case_id": "case-003",
+    "statement": "Manager verbally agreed to a Tuesday/Thursday remote-work schedule.",
+    "asserted_by_role": "employee_role",
+    "source_type": "self_report",
+    "status": "unverified",
+    "evidence_refs": ["ev-020"],
+    "corroborated_by_decision_id": null
+  },
+  {
+    "claim_id": "claim-021",
+    "case_id": "case-003",
+    "statement": "Remote-work days were discussed but not finalized or agreed.",
+    "asserted_by_role": "manager_role",
+    "source_type": "self_report",
+    "status": "unverified",
+    "evidence_refs": ["ev-021"],
+    "corroborated_by_decision_id": null
+  }
+]

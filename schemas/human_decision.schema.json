@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/human-resources-daemon/schemas/human_decision.schema.json",
+  "title": "Human Decision",
+  "description": "An attributable human decision that authorizes a consequential state change. Must always name a human; a decision cannot be attributed to a model or to 'the system'.",
+  "type": "object",
+  "required": ["decision_id", "case_id", "decided_at", "decided_by_role", "decision", "basis_refs"],
+  "properties": {
+    "decision_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "decided_by_role": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The human role that made the decision. Never null."
+    },
+    "decision": {"type": "string", "minLength": 1},
+    "basis_refs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "References to evidence, claims, or a proposed_action considered in making the decision."
+    },
+    "proposed_action_id": {
+      "type": ["string", "null"],
+      "description": "Set when this decision approves or rejects a specific proposed model action."
+    }
+  },
+  "additionalProperties": false
+}

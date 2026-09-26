@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/human-resources-daemon/schemas/evidence_item.schema.json",
+  "title": "Evidence Item",
+  "description": "Source material and its metadata. Evidence is stored as a reference to captured content, not reinterpreted. Evidence is never itself a claim, fact, or model output.",
+  "type": "object",
+  "required": ["evidence_id", "source_type", "captured_at", "content_ref"],
+  "properties": {
+    "evidence_id": {"type": "string", "minLength": 1},
+    "source_type": {
+      "type": "string",
+      "enum": ["email", "letter", "document", "verbal_note", "system_record", "other"]
+    },
+    "captured_at": {"type": "string", "format": "date-time"},
+    "document_date": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "The issuance/revision date claimed by the source document itself, if any. Absence must be surfaced, never silently defaulted."
+    },
+    "content_ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Pointer to stored content (e.g. a fixture file path or content-addressed id). Never inline personally identifying content."
+    },
+    "content_hash": {"type": ["string", "null"]},
+    "supersedes": {
+      "type": ["string", "null"],
+      "description": "evidence_id of a prior version, if this item is a revision. Older evidence must be retained, not overwritten."
+    },
+    "is_synthetic": {
+      "type": "boolean",
+      "const": true,
+      "description": "All committed evidence in this repository must be synthetic."
+    }
+  },
+  "additionalProperties": false
+}

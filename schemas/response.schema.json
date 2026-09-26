@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/human-resources-daemon/schemas/response.schema.json",
+  "title": "Response",
+  "description": "A response to a tracked request.",
+  "type": "object",
+  "required": ["response_id", "request_id", "case_id", "responded_by_role", "responded_at", "summary"],
+  "properties": {
+    "response_id": {"type": "string", "minLength": 1},
+    "request_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "responded_by_role": {"type": "string", "minLength": 1},
+    "responded_at": {"type": "string", "format": "date-time"},
+    "summary": {"type": "string", "minLength": 1},
+    "evidence_refs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

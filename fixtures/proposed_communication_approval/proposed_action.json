@@ -1,0 +1,17 @@
+{
+  "proposal_id": "prop-050",
+  "case_id": "case-006",
+  "kind": "draft_communication",
+  "proposed_at": "2026-04-01T09:30:00Z",
+  "summary": "Draft reply to employee confirming PTO approval status for Feb 2-4.",
+  "rationale": "Deterministic echo of the bounded context (evidence ev-050 plus case-001's resolved status); not independently verified against payroll or calendar systems.",
+  "supporting_evidence_refs": ["ev-050"],
+  "is_inference": true,
+  "requires_human_approval": true,
+  "status": "pending",
+  "decision_id": null,
+  "generated_by": {
+    "provider_name": "echo-provider",
+    "provider_version": "1.0.0"
+  }
+}

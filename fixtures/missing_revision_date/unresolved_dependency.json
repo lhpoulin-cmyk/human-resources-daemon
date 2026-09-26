@@ -1,0 +1,11 @@
+{
+  "dependency_id": "dep-030",
+  "case_id": "case-004",
+  "description": "The submitted expense policy excerpt has no issuance or revision date, so it cannot be confirmed as the currently applicable version.",
+  "blocking": ["case_resolution", "reimbursement_calculation"],
+  "owner_role": "hr_role",
+  "opened_at": "2026-03-15T09:05:00Z",
+  "resolved_at": null,
+  "status": "open",
+  "evidence_refs": ["ev-030"]
+}

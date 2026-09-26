@@ -1,0 +1,19 @@
+{
+  "case_id": "case-006",
+  "title": "Synthetic: proposed draft reply requiring human approval",
+  "status": "review",
+  "topics": ["paid_time_off"],
+  "events": [
+    {
+      "event_id": "evt-050",
+      "kind": "communication_received",
+      "occurred_at": "2026-04-01T09:00:00Z",
+      "actor": "employee_role",
+      "summary": "Employee asked whether their PTO request was approved.",
+      "evidence_refs": ["ev-050"]
+    }
+  ],
+  "evidence_refs": ["ev-050"],
+  "unresolved_questions": [],
+  "human_decisions": []
+}

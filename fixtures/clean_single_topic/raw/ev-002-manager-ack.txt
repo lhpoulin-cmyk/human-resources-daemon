@@ -1,0 +1,7 @@
+[SYNTHETIC TEST FIXTURE — no real person or event]
+
+From: manager_role
+To: employee_role
+Date: 2026-01-05
+
+Got it, thanks. Need to confirm coverage for those dates before I approve.

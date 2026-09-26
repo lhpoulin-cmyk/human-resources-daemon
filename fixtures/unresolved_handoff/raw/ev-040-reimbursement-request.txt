@@ -1,0 +1,8 @@
+[SYNTHETIC TEST FIXTURE — no real person or event]
+
+From: employee_role
+To: hr_role
+Date: 2026-01-20
+
+Submitting travel reimbursement for the Jan 10-12 conference trip,
+receipts attached.

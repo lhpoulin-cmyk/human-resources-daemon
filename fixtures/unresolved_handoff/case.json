@@ -1,0 +1,29 @@
+{
+  "case_id": "case-005",
+  "title": "Synthetic: unresolved travel reimbursement payment handoff",
+  "status": "waiting",
+  "topics": ["travel_reimbursement"],
+  "events": [
+    {
+      "event_id": "evt-040",
+      "kind": "communication_received",
+      "occurred_at": "2026-01-20T08:00:00Z",
+      "actor": "employee_role",
+      "summary": "Employee submitted a travel reimbursement request.",
+      "evidence_refs": ["ev-040"]
+    },
+    {
+      "event_id": "evt-041",
+      "kind": "communication_sent",
+      "occurred_at": "2026-01-22T10:00:00Z",
+      "actor": "hr_role",
+      "summary": "HR said the request was approved and forwarded to payroll for payment.",
+      "evidence_refs": ["ev-041"]
+    }
+  ],
+  "evidence_refs": ["ev-040", "ev-041"],
+  "unresolved_questions": [
+    "Has payroll actually issued payment, and who owns follow-up if it has not?"
+  ],
+  "human_decisions": []
+}

@@ -1,0 +1,8 @@
+[SYNTHETIC TEST FIXTURE — no real person or event]
+
+From: employee_role
+To: hr_role
+Date: 2026-03-01
+
+Just confirming what we agreed on the call — remote Tuesdays and
+Thursdays going forward, starting next week.

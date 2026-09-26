@@ -1,0 +1,22 @@
+[
+  {
+    "evidence_id": "ev-001",
+    "source_type": "email",
+    "captured_at": "2026-01-05T14:00:00Z",
+    "document_date": "2026-01-05T14:00:00Z",
+    "content_ref": "fixtures/clean_single_topic/raw/ev-001-pto-request.txt",
+    "content_hash": null,
+    "supersedes": null,
+    "is_synthetic": true
+  },
+  {
+    "evidence_id": "ev-002",
+    "source_type": "email",
+    "captured_at": "2026-01-05T16:30:00Z",
+    "document_date": "2026-01-05T16:30:00Z",
+    "content_ref": "fixtures/clean_single_topic/raw/ev-002-manager-ack.txt",
+    "content_hash": null,
+    "supersedes": null,
+    "is_synthetic": true
+  }
+]

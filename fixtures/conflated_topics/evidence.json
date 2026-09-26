@@ -1,0 +1,12 @@
+[
+  {
+    "evidence_id": "ev-010",
+    "source_type": "email",
+    "captured_at": "2026-02-10T09:15:00Z",
+    "document_date": "2026-02-10T09:15:00Z",
+    "content_ref": "fixtures/conflated_topics/raw/ev-010-conflated-email.txt",
+    "content_hash": null,
+    "supersedes": null,
+    "is_synthetic": true
+  }
+]

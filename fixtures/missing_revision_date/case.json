@@ -1,0 +1,21 @@
+{
+  "case_id": "case-004",
+  "title": "Synthetic: expense policy excerpt with no issuance date",
+  "status": "waiting",
+  "topics": ["expense_reimbursement"],
+  "events": [
+    {
+      "event_id": "evt-030",
+      "kind": "other",
+      "occurred_at": "2026-03-15T09:00:00Z",
+      "actor": "hr_role",
+      "summary": "An undated expense policy excerpt was submitted as the basis for a mileage reimbursement rate.",
+      "evidence_refs": ["ev-030"]
+    }
+  ],
+  "evidence_refs": ["ev-030"],
+  "unresolved_questions": [
+    "What is the issuance/revision date of this policy excerpt? Its currency cannot be confirmed without it."
+  ],
+  "human_decisions": []
+}

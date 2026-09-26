@@ -1,0 +1,24 @@
+[project]
+name = "hrdaemon"
+version = "0.1.0"
+description = "Human-authority-first HR process daemon: decision support, not an autonomous decision-maker."
+requires-python = ">=3.11"
+dependencies = [
+    "jsonschema>=4.18",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["hrdaemon"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

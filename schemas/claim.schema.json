@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/human-resources-daemon/schemas/claim.schema.json",
+  "title": "Claim / Assertion",
+  "description": "A statement made by a party or inferred by a model. A claim is never automatically a fact. Its status must be explicit and starts unverified.",
+  "type": "object",
+  "required": ["claim_id", "case_id", "statement", "asserted_by_role", "source_type", "status", "evidence_refs"],
+  "properties": {
+    "claim_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "statement": {"type": "string", "minLength": 1},
+    "asserted_by_role": {
+      "type": "string",
+      "description": "The role of whoever made the claim (e.g. 'employee', 'manager', 'hr'), not a personal identifier."
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["self_report", "third_party_report", "document", "model_inference"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["unverified", "corroborated", "contradicted"],
+      "description": "A claim may only become 'corroborated' through an explicit human decision or independent evidence, never through model output alone."
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "corroborated_by_decision_id": {
+      "type": ["string", "null"],
+      "description": "Set only when status is 'corroborated'; must reference a human_decision."
+    }
+  },
+  "additionalProperties": false
+}

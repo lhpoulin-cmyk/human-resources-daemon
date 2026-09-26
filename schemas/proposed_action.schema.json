@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/human-resources-daemon/schemas/proposed_action.schema.json",
+  "title": "Proposed Model Action",
+  "description": "A bounded proposal produced by an AI provider (e.g. a draft communication or a suggested state transition). Always inference, never evidence, and never self-applying.",
+  "type": "object",
+  "required": [
+    "proposal_id",
+    "case_id",
+    "kind",
+    "proposed_at",
+    "summary",
+    "rationale",
+    "is_inference",
+    "requires_human_approval",
+    "status",
+    "generated_by"
+  ],
+  "properties": {
+    "proposal_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "kind": {
+      "type": "string",
+      "enum": ["draft_communication", "suggest_transition", "flag_contradiction", "suggest_question"]
+    },
+    "proposed_at": {"type": "string", "format": "date-time"},
+    "summary": {"type": "string", "minLength": 1},
+    "rationale": {"type": "string", "minLength": 1},
+    "supporting_evidence_refs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "is_inference": {
+      "type": "boolean",
+      "const": true,
+      "description": "Proposed model actions are always inference, never evidence."
+    },
+    "requires_human_approval": {
+      "type": "boolean",
+      "const": true,
+      "description": "No proposed model action may bypass human approval."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "approved", "rejected", "applied"]
+    },
+    "decision_id": {
+      "type": ["string", "null"],
+      "description": "Set once a human_decision has been recorded for this proposal."
+    },
+    "generated_by": {
+      "type": "object",
+      "description": "Provider-neutral attribution. Must not embed vendor-specific conversational state (message ids, session ids, chat history, etc).",
+      "required": ["provider_name"],
+      "properties": {
+        "provider_name": {"type": "string", "minLength": 1},
+        "provider_version": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
