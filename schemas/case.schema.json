@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/human-resources-daemon/schemas/case.schema.json",
+  "title": "HR Daemon Case",
+  "type": "object",
+  "required": ["case_id", "title", "status", "topics", "events", "evidence_refs"],
+  "properties": {
+    "case_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "status": {
+      "type": "string",
+      "enum": ["open", "waiting", "review", "resolved", "closed"]
+    },
+    "topics": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["event_id", "kind", "occurred_at"],
+        "properties": {
+          "event_id": {"type": "string"},
+          "kind": {"type": "string"},
+          "occurred_at": {"type": "string", "format": "date-time"},
+          "actor": {"type": ["string", "null"]},
+          "summary": {"type": ["string", "null"]},
+          "evidence_refs": {
+            "type": "array",
+            "items": {"type": "string"},
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "unresolved_questions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "human_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["decision_id", "decided_at", "decision"],
+        "properties": {
+          "decision_id": {"type": "string"},
+          "decided_at": {"type": "string", "format": "date-time"},
+          "decided_by": {"type": ["string", "null"]},
+          "decision": {"type": "string"},
+          "basis_refs": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
